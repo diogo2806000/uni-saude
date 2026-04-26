@@ -27,17 +27,17 @@ const values = [
 
 const images = [
   {
-    src: '/assets/images/acolhedor.jpg',
+    src: '/uni-saude/assets/images/acolhedor.jpg',
     alt: 'Ambiente acolhedor da clínica Uni Saúde',
     icon: Home
   },
   {
-    src: '/assets/images/consultorio.jpg',
+    src: '/uni-saude/assets/images/consultorio.jpg',
     alt: 'Consultório confortável e iluminado',
     icon: Activity
   },
   {
-    src: '/assets/images/equipe.jpg',
+    src: '/uni-saude/assets/images/equipe.jpg',
     alt: 'Equipe médica conversando com paciente',
     icon: Users
   }
