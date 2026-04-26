@@ -1,13 +1,8 @@
 const nextConfig = {
-  reactStrictMode: true,
-  images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'images.unsplash.com'
-      }
-    ]
-  }
+  output: 'export',
+  images: { unoptimized: true },
+  basePath: '/uni-saude',
+  assetPrefix: '/uni-saude/'
 };
 
 export default nextConfig;
