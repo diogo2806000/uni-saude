@@ -13,7 +13,7 @@ export default function FloatingWhatsApp() {
       target="_blank"
       rel="noreferrer"
       aria-label="Abrir WhatsApp"
-      className="fixed bottom-6 right-6 z-50 inline-flex items-center gap-3 rounded-full bg-success-500 px-5 py-4 text-sm font-semibold text-white shadow-2xl shadow-success-500/30 transition hover:bg-emerald-600"
+      className="fixed bottom-4 right-4 z-50 inline-flex items-center gap-3 rounded-full bg-success-500 px-5 py-4 text-sm font-semibold text-white shadow-2xl shadow-success-500/30 transition hover:bg-emerald-600 sm:bottom-6 sm:right-6"
     >
       <MessageCircle className="h-5 w-5" />
       Fale conosco

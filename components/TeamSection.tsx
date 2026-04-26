@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 const team = [
@@ -45,11 +46,11 @@ export default function TeamSection() {
   return (
     <section id="team" className="section-container">
       <div className="mx-auto max-w-3xl text-center">
-        <p className="text-sm uppercase tracking-[0.3em] text-brand-600">Corpo Clínico</p>
-        <h2 className="mt-4 text-3xl font-semibold text-slate-950 sm:text-4xl">Profissionais que acompanham sua saúde com segurança e empatia.</h2>
+        <p className="text-xs sm:text-sm uppercase tracking-[0.3em] text-brand-600">Corpo Clínico</p>
+        <h2 className="mt-3 sm:mt-4 text-2xl sm:text-3xl md:text-4xl font-semibold text-slate-950">Profissionais que acompanham sua saúde com segurança e empatia.</h2>
       </div>
 
-      <div className="mt-10 grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
+      <div className="mt-8 sm:mt-10 grid gap-5 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {team.map((doctor, index) => (
           <motion.article
             key={doctor.name}
@@ -57,16 +58,22 @@ export default function TeamSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.5, delay: index * 0.08 }}
-            className="overflow-hidden rounded-[2rem] bg-white shadow-soft"
+            className="overflow-hidden rounded-2xl sm:rounded-[2rem] bg-white shadow-soft"
           >
-            <img src={doctor.image} alt={doctor.name} className="h-72 w-full object-cover" />
-            <div className="space-y-4 p-6">
-              <div className="inline-flex rounded-full bg-brand-50 px-4 py-2 text-sm font-semibold text-brand-700">
+            <Image
+              src={doctor.image}
+              alt={doctor.name}
+              width={600}
+              height={450}
+              className="h-56 sm:h-72 w-full object-cover"
+            />
+            <div className="space-y-3 sm:space-y-4 p-4 sm:p-6">
+              <div className="inline-flex rounded-full bg-brand-50 px-3 sm:px-4 py-1 sm:py-2 text-xs sm:text-sm font-semibold text-brand-700">
                 {doctor.specialty}
               </div>
               <div>
-                <h3 className="text-xl font-semibold text-slate-950">{doctor.name}</h3>
-                <p className="mt-2 text-sm leading-7 text-slate-600">{doctor.summary}</p>
+                <h3 className="text-lg sm:text-xl font-semibold text-slate-950">{doctor.name}</h3>
+                <p className="mt-1 sm:mt-2 text-xs sm:text-sm leading-6 sm:leading-7 text-slate-600">{doctor.summary}</p>
               </div>
             </div>
           </motion.article>
